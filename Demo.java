@@ -1,4 +1,4 @@
-class Test{
+/*class Test{
 	int a;
 	static int b;
 	Test(){
@@ -21,5 +21,64 @@ class Demo{
 		Test t1=new Test();
 		Test t2=new Test();
 		Test t3=new Test();
+	}
+}*/
+/*class Date{
+	private static int year;
+	private static int month;
+	private static int day;
+	
+	public void setDate(int year int month int day){
+		this.year = year;
+		this.month = month;
+		this.day = day;
+	}
+	public void 
+}
+class Demo{
+	public static void main(String[] args){
+		Date d1 = new Date();
+		d1.setDate(2026,07,10);
+		
+		Date d1 = new Date();
+		d1.setDate(1996,12,15);
+		
+		Date d1 = new Date();
+		d1.setDate(2020,01,16);
+		
+		d1.printDate();
+		d2.printDate();
+	}
+}*/
+
+class Date{
+	private static int year;
+	private static int month;
+	private static int day;
+	
+	public void setDate(int year, int month, int day){
+		this.year = year;
+		this.month = month;
+		this.day = day;
+	}
+	/*public void printDate(){
+		System.out.println(year);
+		System.out.println(month);
+		System.out.println(day);
+	}*/
+	public int getyear(){
+		return year;
+	}
+
+}
+class Demo{
+	public static void main(String[] args){
+		
+		Date d1 = new Date();
+		d1.setDate(2025,01,16);
+		//d1.printDate();
+		System.out.println(d1.getyear());
+		//System.out.println(d1.month);
+		//System.out.println(d1.day);
 	}
 }
