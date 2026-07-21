@@ -82,7 +82,7 @@ class Demo{
 		//System.out.println(d1.day);
 	}
 }*/
-class Account{
+/*class Account{
 	int balance;
 	
 	Account(int balance){
@@ -105,5 +105,42 @@ class Demo{
 		
 		AccountController.withdraw(5000, c1);
 		c1.displayBalance();
+	}
+}*/
+
+class Box{
+	int length;
+	int width;
+	int height;
+	
+	Box(int length, int width, int height){
+		this.length = length;
+		this.width = width;
+		this.height = height;
+	}
+	
+	public void printVolume(){
+		int volume;
+		volume = length*width*height;
+		System.out.println("Volume of the Box : " + volume);
+	}
+}
+class Demo{
+	public static void main(String[] args){
+		//Box b1 = new Box(12,5,3);
+		//b1.printVolume();
+		
+		Box[] br = new Box[5];
+		//System.out.println(br[0] + "," + br[1] + "," + br[2] + "," + br[3] + "," + br[4]);
+		
+		br[0] = new Box(6,5,9);
+		br[1] = new Box(1,2,3);
+		br[2] = new Box(4,5,6);
+		br[3] = new Box(7,8,9);
+		br[4] = new Box(8,2,3);
+		
+		for(int i=0; i<br.length; i++){
+			br[i].printVolume();
+		}
 	}
 }
