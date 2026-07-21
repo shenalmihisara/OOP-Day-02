@@ -108,7 +108,7 @@ class Demo{
 	}
 }*/
 
-class Box{
+/*class Box{
 	int length;
 	int width;
 	int height;
@@ -143,4 +143,61 @@ class Demo{
 			br[i].printVolume();
 		}
 	}
+}*/
+
+import java.util.*;
+class Demo{
+	public static String[] idArray=new String[0];
+	public static String[] nameArray=new String[0];
+	public static int[] prfMarksArray=new int[0];
+	public static int[] dbmsMarksArray=new int[0];
+	
+	public static void addStudent(){
+		Scanner input=new Scanner(System.in);
+		System.out.print("Input Student Id : ");
+		String id=input.nextLine(); 
+		System.out.print("Input Student Name : ");
+		String name=input.nextLine();
+		System.out.print("Input PRF  Marks : ");
+		int prfMarks=input.nextInt();
+		System.out.print("Input DBMS Marks : ");
+		int dbmsMarks=input.nextInt();
+		
+		incrementArrrays();
+		idArray[idArray.length-1]=id;
+		nameArray[idArray.length-1]=name;
+		prfMarksArray[idArray.length-1]=prfMarks;
+		dbmsMarksArray[idArray.length-1]=dbmsMarks;
+		
+	}
+	private static void incrementArrrays(){
+		String[] tempIdArray=new String[idArray.length+1];
+		String[] tempNameArray=new String[idArray.length+1];
+		int[] tempPrfMarksArray=new int[idArray.length+1];
+		int[] tempDbmsMarksArray=new int[idArray.length+1];
+		
+		for(int i=0; i<idArray.length; i++){
+			tempDbmsMarksArray[i]=dbmsMarksArray[i];
+			tempIdArray[i]=idArray[i];
+			tempNameArray[i]=nameArray[i];
+			tempPrfMarksArray[i]=prfMarksArray[i];			
+		}
+		idArray=tempIdArray;
+		nameArray=tempNameArray;
+		prfMarksArray=tempPrfMarksArray;
+		dbmsMarksArray=tempDbmsMarksArray;
+	}
+
+	public static void printStudentsDetail(){
+		System.out.println("ID\tName\tPRF\tDBMS");
+		System.out.println("=========================");
+		for(int i=0; i<idArray.length; i++){
+			System.out.println(idArray[i]+"\t"+nameArray[i]+"\t"+prfMarksArray[i]+"\t"+dbmsMarksArray[i]);
+		}
+	}
+	public static void main(String args[]){
+		addStudent();
+		addStudent();
+		printStudentsDetail();
+	}	
 }
