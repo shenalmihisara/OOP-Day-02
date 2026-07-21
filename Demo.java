@@ -51,7 +51,7 @@ class Demo{
 	}
 }*/
 
-class Date{
+/*class Date{
 	private static int year;
 	private static int month;
 	private static int day;
@@ -60,13 +60,13 @@ class Date{
 		this.year = year;
 		this.month = month;
 		this.day = day;
-	}
+	}*/
 	/*public void printDate(){
 		System.out.println(year);
 		System.out.println(month);
 		System.out.println(day);
 	}*/
-	public int getyear(){
+	/*public int getyear(){
 		return year;
 	}
 
@@ -80,5 +80,30 @@ class Demo{
 		System.out.println(d1.getyear());
 		//System.out.println(d1.month);
 		//System.out.println(d1.day);
+	}
+}*/
+class Account{
+	int balance;
+	
+	Account(int balance){
+		this.balance=balance;
+	}
+	
+	public void displayBalance(){
+		System.out.println("Balance : "+balance);
+	}
+}
+class AccountController{
+	public static void withdraw(int amount, Account c1){
+		c1.balance-=amount;
+	}
+}
+class Demo{
+	public static void main(String args[]){
+		Account c1=new Account(100000);
+		c1.displayBalance();
+		
+		AccountController.withdraw(5000, c1);
+		c1.displayBalance();
 	}
 }
